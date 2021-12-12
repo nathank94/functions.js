@@ -3,7 +3,8 @@
 */
 
 maxOfTwoNumbers = () => {
-  // console.log(Math.max(1, 3));
+  // 
+  console.log(Math.max(1, 3));
 };
 
 maxOfThree();
@@ -12,7 +13,8 @@ maxOfThree();
 2. Define a function maxOfThree that takes three numbers as arguments and returns the largest of them.
 */
 maxOfThree = () => {
-  // console.log(Math.max(1, 3, 2));
+  //
+   console.log(Math.max(1, 3, 2));
 };
 
 /*
@@ -84,12 +86,41 @@ console.log(reverse("jag testar"));
 7. Write a function findLongestWord that takes an array of words and returns the length of the longest one.
 */
 findLongestWord = () => {
-  // ADD YOUR CODE HERE
+  // function longer(champ, contender) {
+  return (contender.length > champ.length) ? contender : champ;
+}
+
+function longestWord(str) {
+  var words = str.split(' ');
+  return words.reduce(longer);
+}
+
 };
 
 /*
 8. Write a function filterLongWords that takes an array of words and a number i and returns the array of words that are longer than i characters long.
 */
 filterLongWords = () => {
-  // ADD YOUR CODE HERE
+  // function getLongest (arrStr) {
+  var longest = 0, word;
+
+  for(var i=0 , len = arrStr.length ; i < len ; i++){
+
+    if(longest < arrStr[i].length) {
+       longest = arrStr[i].length;
+       word = arrStr[i];
+    }
+
+  }
+
+  return word;
+}
+
+function isLongest (str) {
+  var arrayStr = str.split(' ');
+  return function(fn) {
+    return fn.apply(this,[arrayStr]);
+  }
+}
+
 };
